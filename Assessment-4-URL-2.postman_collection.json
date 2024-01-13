@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "6a28d0c0-2079-468b-94b2-9550425a7ae1",
+		"name": "Assessment-4-URL-2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32196326",
+		"_collection_link": "https://grey-firefly-480229.postman.co/workspace/d5ab245d-4c6a-4177-8869-5da647f32146/collection/32196326-6a28d0c0-2079-468b-94b2-9550425a7ae1?action=share&source=collection_link&creator=32196326"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "q",
+						"value": "<string>",
+						"description": "**City name**. *Example: London*. You can call by city name, or by city name and country code. The API responds with a list of results that match a searching word. For the query value, type the city name and optionally the country code divided by a comma; use ISO 3166 country c",
+						"type": "text"
+					},
+					{
+						"key": "lat",
+						"value": "<number>",
+						"description": "**Latitude**. *Example: 35*. The latitude coordinate of the location of your interest. Must use with `lon`.",
+						"type": "text"
+					},
+					{
+						"key": "lang",
+						"value": "<string>",
+						"description": "**Language**. *Example: en*. You can use lang parameter to get the output in your language. We support the following languages that you can use with the corresponded lang values: Arabic - `ar`, Bulgarian - `bg`, Catalan - `ca`, Czech - `cz`, German - `de`, Greek - `el`, English - `en`, Persian (Farsi) - `fa`, Finnish - `fi`, French - `fr`, Galician - `gl`, Croatian - `hr`, Hungarian - `hu`, Italian - `it`, Japanese - `ja`, Korean - `kr`, Latvian - `la`, Lithuanian - `lt`, Macedonian - `mk`, Dutc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://openweathermap.org/api",
+					"protocol": "https",
+					"host": [
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

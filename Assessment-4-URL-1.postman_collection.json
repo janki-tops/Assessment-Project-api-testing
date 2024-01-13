@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "c0784a73-ebe9-4946-b047-f8fc5bc5a5b1",
+		"name": "Assessment-4-URL-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32196326",
+		"_collection_link": "https://grey-firefly-480229.postman.co/workspace/d5ab245d-4c6a-4177-8869-5da647f32146/collection/32196326-c0784a73-ebe9-4946-b047-f8fc5bc5a5b1?action=share&source=collection_link&creator=32196326"
+	},
+	"item": [
+		{
+			"name": "user registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fname\":\"Janki\",\r\n    \"lname\":\"Soni\",\r\n    \"email\":\"abc@gmail.com\",\r\n    \"phno\":\"9823456987\",\r\n    \"pass\":\"janki\",\r\n    \"gender\":\"female\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restapilive.onrender.com/userreg",
+					"protocol": "https",
+					"host": [
+						"restapilive",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"userreg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"abc@gmail.com\",\r\n    \"pass\":\"janki\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restapilive.onrender.com/userlogin",
+					"protocol": "https",
+					"host": [
+						"restapilive",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"userlogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminlogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\":\"admin@gmail.com\",\r\n  \"password\":\"admin\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restapilive.onrender.com/alogin",
+					"protocol": "https",
+					"host": [
+						"restapilive",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"alogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addproductcategory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "admin-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ZkYjRmZGNiN2MxNDVhOWNiZjZmZWYiLCJpYXQiOjE3MDUxNjQ3Njh9.pExnD3HcpC0aIGna0MSiibXPJlEWbJiNwq4aDsNVnwo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"catname\":\"Electronics\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restapilive.onrender.com/addcategory",
+					"protocol": "https",
+					"host": [
+						"restapilive",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"addcategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewproductcategory",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "admin-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ZkYjRmZGNiN2MxNDVhOWNiZjZmZWYiLCJpYXQiOjE3MDUxNjQ3Njh9.pExnD3HcpC0aIGna0MSiibXPJlEWbJiNwq4aDsNVnwo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://restapilive.onrender.com/category",
+					"protocol": "https",
+					"host": [
+						"restapilive",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"category"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteproductcategory",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "admin-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ZkYjRmZGNiN2MxNDVhOWNiZjZmZWYiLCJpYXQiOjE3MDUxNjQ3Njh9.pExnD3HcpC0aIGna0MSiibXPJlEWbJiNwq4aDsNVnwo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://restapilive.onrender.com/deletecat?did=65a2bffae2c070a23974ac9a",
+					"protocol": "https",
+					"host": [
+						"restapilive",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"deletecat"
+					],
+					"query": [
+						{
+							"key": "did",
+							"value": "65a2bffae2c070a23974ac9a"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
